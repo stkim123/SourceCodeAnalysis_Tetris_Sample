@@ -13,7 +13,7 @@ public class Backgrounds extends JFrame {
     
     private BackG background;
     
-    private JLayeredPane layeredPane = new JLayeredPane();
+    private final JLayeredPane layeredPane = new JLayeredPane();
     
     Backgrounds(String image, int x, int y) {
         DrawBackGround(image, x, y);

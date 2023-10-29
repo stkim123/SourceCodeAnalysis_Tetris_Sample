@@ -1,14 +1,13 @@
 package kr.ac.jbnu.se.tetris;
 
+import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-import javax.imageio.ImageIO;
-
 public class BlockImage {
 
-    private BufferedImage blockImage;
+    private final BufferedImage blockImage;
 
     public BlockImage(Tetrominoes shape) {
         blockImage = getImage(getImageFile(shape));

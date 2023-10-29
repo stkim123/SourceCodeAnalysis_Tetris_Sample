@@ -1,5 +1,6 @@
 package kr.ac.jbnu.se.tetris;
-import javax.swing.JFrame;
+
+import javax.swing.*;
 
 public class Tutorial extends JFrame {
     
@@ -7,7 +8,7 @@ public class Tutorial extends JFrame {
 
     private Backgrounds background;
     
-    private String tutorialpng = "image/tutorials.png";
+    private final String tutorialpng = "image/tutorials.png";
     
     Tutorial() {
         setFrame();

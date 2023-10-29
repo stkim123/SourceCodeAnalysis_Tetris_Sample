@@ -6,13 +6,13 @@ import java.awt.event.ActionListener;
 
 public class Setting extends JFrame {
 
-    private Select home;
+    private final Select home;
 
     private Backgrounds backgrounds;
     private JButton musicButton, changekey, backselect;
     private boolean isMusicStarted = true;
 
-    private KeyChange keyChange;
+    private final KeyChange keyChange;
 
     Setting(Select home) {
         this.home = home;

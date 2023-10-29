@@ -75,9 +75,7 @@ public class SignUp extends JFrame{
                 sign_pw = txt_pw.getText();
                 try {
                     SignUpSQL signUpSQL = new SignUpSQL(sign_id, sign_pw);
-                } catch (SQLException ex) {
-                    throw new RuntimeException(ex);
-                } catch (IOException ex) {
+                } catch (SQLException | IOException ex) {
                     throw new RuntimeException(ex);
                 }
             }

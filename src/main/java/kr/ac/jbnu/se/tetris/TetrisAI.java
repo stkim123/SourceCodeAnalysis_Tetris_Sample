@@ -5,7 +5,7 @@ import java.util.Queue;
 
 public class TetrisAI {
 
-    private BoardAI board;
+    private final BoardAI board;
 
     private Queue<Shape> shapeQueue;
     private Queue<String> routeQueue;
@@ -19,7 +19,8 @@ public class TetrisAI {
 
     private int maxWeight;
     
-    private int[] dx, dy;
+    private final int[] dx;
+    private final int[] dy;
     
     public TetrisAI(BoardAI board) {
         this.board = board;
@@ -86,7 +87,7 @@ public class TetrisAI {
             nPiece.moveTo(nX, nY);
             visited[nY][nX][nPiece.getRotateIndex()] = true;
 
-            routeQueue.add(curRoute + Integer.toString(i));
+            routeQueue.add(curRoute + i);
             shapeQueue.add(nPiece);
         }
     }

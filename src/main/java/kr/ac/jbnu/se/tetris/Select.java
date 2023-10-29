@@ -1,7 +1,6 @@
 package kr.ac.jbnu.se.tetris;
 
 import javax.swing.*;
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -11,13 +10,13 @@ public class Select extends JFrame {
     private final int Bt_W = 172, Bt_H = 50, Bt_Y = Frame_Y - 150;
 
     private Backgrounds background;
-    private Music music;
+    private final Music music;
 
-    private SelectLevel selectLevel;
+    private final SelectLevel selectLevel;
 
-    private Setting setting;
+    private final Setting setting;
 
-    private Tutorial tutorial;
+    private final Tutorial tutorial;
 
     private JButton ai, versus, settingBtn, tutorialBtn;
 

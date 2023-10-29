@@ -1,5 +1,8 @@
 package kr.ac.jbnu.se.tetris;
-import java.sql.*;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class ServerSetting {
 
@@ -13,11 +16,7 @@ public class ServerSetting {
     public void connectMysql() {
         try {
             Class.forName(ServerInfo.DRIVER).newInstance();
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (InstantiationException e) {
-            throw new RuntimeException(e);
-        } catch (IllegalAccessException e) {
+        } catch (ClassNotFoundException | IllegalAccessException | InstantiationException e) {
             throw new RuntimeException(e);
         }
     }

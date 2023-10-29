@@ -1,15 +1,14 @@
 package kr.ac.jbnu.se.tetris;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-import javax.swing.Timer;
 
 public class BoardAI extends Board implements ActionListener {
 
     public static int moveDelay = 100;
 
-    private TetrisAI computer;
+    private final TetrisAI computer;
 
     private String bestRoute = "";
 

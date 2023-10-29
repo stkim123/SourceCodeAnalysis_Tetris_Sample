@@ -1,13 +1,11 @@
 package kr.ac.jbnu.se.tetris;
 
-import java.awt.BorderLayout;
+import javax.swing.*;
+import java.awt.*;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-
-import javax.swing.JLabel;
-import javax.swing.JPanel;
 
 public class MaxScorePanel extends JPanel {
 

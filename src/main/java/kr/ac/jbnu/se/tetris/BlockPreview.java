@@ -1,15 +1,13 @@
 package kr.ac.jbnu.se.tetris;
 
-import java.awt.Dimension;
-import java.awt.Graphics;
-
-import javax.swing.JPanel;
+import javax.swing.*;
+import java.awt.*;
 
 public class BlockPreview extends JPanel {
 
     protected final int PanelWidth = 60, PanelHeight = 80, width = 3, height = 4;
 
-    private Tetrominoes[][] nextPiece;
+    private final Tetrominoes[][] nextPiece;
 
     private Shape piece;
 
@@ -27,10 +25,10 @@ public class BlockPreview extends JPanel {
     }
 
     private int squareWidth(){
-        return (int) PanelWidth / width;
+        return PanelWidth / width;
     }
     private int squareHeight(){
-        return (int) PanelHeight / height;
+        return PanelHeight / height;
     }
 
     private void initNextPiece(){
@@ -62,7 +60,7 @@ public class BlockPreview extends JPanel {
         for(int i = 0; i < height; i++){
             for(int j = 0; j < width; j++){
                 if(nextPiece[i][j] != Tetrominoes.NoShape){
-                    drawSquare(g, 0 + j * squareWidth(), boardTop + i * squareHeight(), piece.getShape());
+                    drawSquare(g, j * squareWidth(), boardTop + i * squareHeight(), piece.getShape());
                 }
             }
         }

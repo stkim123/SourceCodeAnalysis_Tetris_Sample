@@ -7,7 +7,7 @@ public class Shape implements Cloneable {
     private Tetrominoes pieceShape; // 모양
 
     private int[][][] coordsTable; 
-    private int[][] coords; // 모양의 좌표값
+    private final int[][] coords; // 모양의 좌표값
 
     private int curX = 0;
     private int curY = 0; // 현재 위치
@@ -32,9 +32,7 @@ public class Shape implements Cloneable {
                                     { { 0, 0 }, { 0, 0 }, { 0, 0 }, { 0, 0 } } };
 
         for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 2; ++j) {
-                coords[i][j] = coordsTable[shape.ordinal()][i][j];
-            }
+            System.arraycopy(coordsTable[shape.ordinal()][i], 0, coords[i], 0, 2);
         }
 
         rotateIndex = 0;
@@ -44,7 +42,7 @@ public class Shape implements Cloneable {
 
     public Object clone() { // CloneNotSupportedException는 checked exception 이라 반드시 예외처리
         try {
-            return (Shape) super.clone(); // 기본적으로 부모의 clone을 그대로 불러와 반환
+            return super.clone(); // 기본적으로 부모의 clone을 그대로 불러와 반환
         } catch (CloneNotSupportedException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

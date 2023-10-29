@@ -1,13 +1,8 @@
 package kr.ac.jbnu.se.tetris;
 
-import java.awt.AlphaComposite;
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-
-import java.util.concurrent.ThreadLocalRandom;
-
 import javax.swing.*;
+import java.awt.*;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Board extends JPanel {
 
@@ -161,10 +156,10 @@ public class Board extends JPanel {
     }
     
     private int squareWidth() { // 블록 한칸(1 x 1) 가로 길이
-        return (int) getPreferredSize().width / BoardWidth;
+        return getPreferredSize().width / BoardWidth;
     }
     private int squareHeight() { // 블록 한칸(1 x 1) 세로 길이
-        return (int) getPreferredSize().height / BoardHeight;
+        return getPreferredSize().height / BoardHeight;
     }
     
     private Tetrominoes shapeAt(int x, int y) { // (x, y)에 있는 블럭의 Tetrominoes 타입

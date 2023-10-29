@@ -1,25 +1,22 @@
 package kr.ac.jbnu.se.tetris;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-
 public class SelectLevel extends JFrame {
 
-    private Select home;
+    private final Select home;
 
     private final int LevelNumber = 5;
 
     private final int Bt_W = 120, Bt_H = 35;
 
-    private JButton[] level;
+    private final JButton[] level;
 
-    private JButton backselect;
+    private final JButton backselect;
 
-    private Backgrounds backgrounds;
+    private final Backgrounds backgrounds;
 
     public SelectLevel(Select home){
         this.home = home;

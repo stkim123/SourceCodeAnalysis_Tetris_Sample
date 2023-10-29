@@ -6,6 +6,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.sql.SQLException;
 
@@ -45,6 +46,16 @@ public class LoginPage extends JFrame {
     }
 
     public void setBackgrounds() {
+        try {
+            FileOutputStream fout = new FileOutputStream("aa.txt");
+            fout.write("aa".getBytes());
+            fout.close();
+        }
+        catch(IOException ioe)
+        {
+            ioe.printStackTrace();
+        }
+
         backgrounds = new Backgrounds("image/Background.jpg",x,y);
     }
 
@@ -88,13 +99,7 @@ public class LoginPage extends JFrame {
                 try {
                     ComPareID comPareID = new ComPareID(cmp_id, cmp_pw);
                     if(!ComPareID.visible) setVisible(false);
-                } catch (SQLException ex) {
-                    throw new RuntimeException(ex);
-                } catch (UnsupportedAudioFileException ex) {
-                    throw new RuntimeException(ex);
-                } catch (LineUnavailableException ex) {
-                    throw new RuntimeException(ex);
-                } catch (IOException ex) {
+                } catch (SQLException | IOException | LineUnavailableException | UnsupportedAudioFileException ex) {
                     throw new RuntimeException(ex);
                 }
             }

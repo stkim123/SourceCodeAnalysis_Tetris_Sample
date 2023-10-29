@@ -1,18 +1,16 @@
 package kr.ac.jbnu.se.tetris;
 
-import java.awt.BorderLayout;
+import javax.swing.*;
+import java.awt.*;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-
 public class TimerPanel extends JPanel {
     
-    private ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
+    private final ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
     private int second = 0, minute = 0;
-    private JLabel timernum;
+    private final JLabel timernum;
 
     public TimerPanel() {
         timernum = new JLabel();

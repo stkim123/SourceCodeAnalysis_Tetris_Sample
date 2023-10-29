@@ -1,16 +1,16 @@
 package kr.ac.jbnu.se.tetris;
 
-import java.awt.*;
 import javax.swing.*;
 import javax.swing.plaf.basic.BasicProgressBarUI;
+import java.awt.*;
 
 public class Tetris extends JPanel {
 
-    private TetrisGameManager parent;
+    private final TetrisGameManager parent;
 
     final int Frame_X = 335, Frame_Y = 500, Status_X = 60, Status_Y = 30;
 
-    private boolean isComputer;
+    private final boolean isComputer;
     
     // 체력바
     private JProgressBar healthBar;
